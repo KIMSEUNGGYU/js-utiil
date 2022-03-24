@@ -1,4 +1,4 @@
-const { isArray, isNumber } = require("./index");
+const { isArray, isNumber, isString } = require("./index");
 
 describe("check array", () => {
   it("array type is true", () => {
@@ -25,5 +25,19 @@ describe("check number", () => {
     const value = "1";
 
     expect(isNumber(value)).not.toBe(true);
+  });
+});
+
+describe("check string", () => {
+  it("'abc' is string", () => {
+    const value = "abc";
+
+    expect(isString(value)).toBe(true);
+  });
+
+  it("1 is not a string", () => {
+    const value = 1;
+
+    expect(isString(value)).not.toBe(true);
   });
 });

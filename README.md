@@ -6,7 +6,7 @@ js 로 만들어보는 util 성 기능
 - `is` - 타입 검증
    - [x] `array` 
    - [x] `number`
-   - [ ] `string`
+   - [x] `string`
    - [ ] `boolean`
    - [ ] `undefined`
    - [ ] `null`
