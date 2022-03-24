@@ -4,7 +4,8 @@ js 로 만들어보는 util 성 기능
 
 ## 구현 util
 - `is` - 타입 검증
-   - [ ] `number`
+   - [x] `array` 
+   - [x] `number`
    - [ ] `string`
    - [ ] `boolean`
    - [ ] `undefined`

@@ -2,4 +2,8 @@ function isArray(value) {
   return Array.isArray(value);
 }
 
-module.exports = { isArray };
+function isNumber(value) {
+  return typeof value === "number" && !isNaN(value);
+}
+
+module.exports = { isArray, isNumber };
