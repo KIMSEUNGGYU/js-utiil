@@ -3,15 +3,15 @@ function isArray(value) {
 }
 
 function isNumber(value) {
-  return typeof value === "number" && !isNaN(value);
+  return typeof value === 'number' && !isNaN(value);
 }
 
 function isString(value) {
-  return typeof value === "string";
+  return typeof value === 'string';
 }
 
 function isBoolean(value) {
-  return value === true || value === false
+  return value === true || value === false;
 }
 
 function isUndefiend(value) {
@@ -22,11 +22,11 @@ function isNull(value) {
   return value === null;
 }
 
-module.exports = { 
-  isArray, 
-  isNumber, 
-  isString, 
-  isBoolean, 
+module.exports = {
+  isArray,
+  isNumber,
+  isString,
+  isBoolean,
   isUndefiend,
-  isNull
+  isNull,
 };
