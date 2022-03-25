@@ -9,7 +9,7 @@ js 로 만들어보는 util 성 기능
    - [x] `string`
    - [x] `boolean`
    - [x] `undefined`
-   - [ ] `null`
+   - [x] `null`
    - [ ] `object`
    - [ ] `function`
    - [ ] `iterable`
@@ -23,10 +23,10 @@ js 로 만들어보는 util 성 기능
   - [ ] `findIndex`
   - [ ] `includes`
   - [ ] `reduce`
-- `lodash` - 링크
+- `lodash` - [링크](https://lodash.com/docs/4.17.15)
+  - [ ] `chunk`
   - [ ] `curry`
   - [ ] `flat`
-  - [ ] `chunk`
   - [ ] `cloneDeep`
   - [ ] `memoize`
   - [ ] `debounce`
