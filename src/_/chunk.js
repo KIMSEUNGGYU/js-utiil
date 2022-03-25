@@ -5,28 +5,11 @@ const _ = require('lodash');
 function chunk(array, size = 1) {
   const newArray = [];
 
-  let startIndex = 0;
-  let endIndex = size;
-
-  while (endIndex <= array.length) {
-    const temp = [];
-    while (startIndex < endIndex) {
-      temp.push(array[startIndex++]);
-    }
-    newArray.push(temp);
-
-    endIndex += size;
+  let index = 0;
+  while (index < array.length) {
+    newArray.push(array.slice(index, index + size));
+    index += size;
   }
-
-  if (startIndex === array.length) {
-    return newArray;
-  }
-
-  const temp = [];
-  while (startIndex < array.length) {
-    temp.push(array[startIndex++]);
-  }
-  newArray.push(temp);
 
   return newArray;
 }
