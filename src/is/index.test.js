@@ -1,4 +1,4 @@
-const { isArray, isNumber, isString, isBoolean } = require("./index");
+const { isArray, isNumber, isString, isBoolean, isUndefiend } = require("./index");
 
 describe("check array", () => {
   it("array type is true", () => {
@@ -60,6 +60,22 @@ describe("check boolean", () => {
 
     values.forEach((value) => {
       expect(isBoolean(value)).not.toBe(true);
+    })
+  });
+});
+
+describe("check undefined", () => {
+  it("undefned is undefined", () => {
+    const value = undefined;
+
+    expect(isUndefiend(value)).toBe(true);
+  });
+
+  it("1,'a', \"\",{},[], null, false is not undefined", () => {
+    const values = [1, 'a', "",{}, [], null, false];
+
+    values.forEach((value) => {
+      expect(isUndefiend(value)).not.toBe(true);
     })
   });
 });
