@@ -10,4 +10,8 @@ function isString(value) {
   return typeof value === "string";
 }
 
-module.exports = { isArray, isNumber, isString };
+function isBoolean(value) {
+  return value === true || value === false
+}
+
+module.exports = { isArray, isNumber, isString, isBoolean };

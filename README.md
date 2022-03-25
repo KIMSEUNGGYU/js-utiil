@@ -7,7 +7,7 @@ js 로 만들어보는 util 성 기능
    - [x] `array` 
    - [x] `number`
    - [x] `string`
-   - [ ] `boolean`
+   - [x] `boolean`
    - [ ] `undefined`
    - [ ] `null`
    - [ ] `object`

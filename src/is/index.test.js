@@ -1,4 +1,4 @@
-const { isArray, isNumber, isString } = require("./index");
+const { isArray, isNumber, isString, isBoolean } = require("./index");
 
 describe("check array", () => {
   it("array type is true", () => {
@@ -39,5 +39,27 @@ describe("check string", () => {
     const value = 1;
 
     expect(isString(value)).not.toBe(true);
+  });
+});
+
+describe("check boolean", () => {
+  it("true is boolean", () => {
+    const value = true;
+
+    expect(isBoolean(value)).toBe(true);
+  });
+
+  it("false is boolean", () => {
+    const value = false;
+
+    expect(isBoolean(value)).toBe(true);
+  });
+
+  it("1,'a',{},[] is not boolean", () => {
+    const values = [1, 'a', {}, []];
+
+    values.forEach((value) => {
+      expect(isBoolean(value)).not.toBe(true);
+    })
   });
 });
