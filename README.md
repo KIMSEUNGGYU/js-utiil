@@ -15,7 +15,7 @@ js 로 만들어보는 util 성 기능
    - [ ] `iterable`
    - [ ] `promise`
 - `array 메서드` 
-  - [ ] `map`
+  - [x] `map`
   - [ ] `filter`
   - [ ] `every`
   - [ ] `some`
