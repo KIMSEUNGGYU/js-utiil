@@ -17,7 +17,7 @@ js 로 만들어보는 util 성 기능
 - `array 메서드` 
   - [x] `map`
   - [x] `filter`
-  - [ ] `every`
+  - [x] `every`
   - [ ] `some`
   - [ ] `find`
   - [ ] `findIndex`
