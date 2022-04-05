@@ -22,7 +22,7 @@ js 로 만들어보는 util 성 기능
   - [x] `find`
   - [x] `findIndex`
   - [x] `indexOf`
-  - [ ] `includes`
+  - [x] `includes`
   - [ ] `reduce`
 - `lodash` - [링크](https://lodash.com/docs/4.17.15)
   - [ ] `chunk`
