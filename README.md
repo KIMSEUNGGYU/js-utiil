@@ -20,7 +20,7 @@ js 로 만들어보는 util 성 기능
   - [x] `every`
   - [x] `some`
   - [x] `find`
-  - [ ] `findIndex`
+  - [x] `findIndex`
   - [ ] `indexOf`
   - [ ] `includes`
   - [ ] `reduce`
