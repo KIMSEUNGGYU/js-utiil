@@ -18,7 +18,7 @@ js 로 만들어보는 util 성 기능
   - [x] `map`
   - [x] `filter`
   - [x] `every`
-  - [ ] `some`
+  - [x] `some`
   - [ ] `find`
   - [ ] `findIndex`
   - [ ] `includes`
