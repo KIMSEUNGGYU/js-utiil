@@ -19,8 +19,9 @@ js 로 만들어보는 util 성 기능
   - [x] `filter`
   - [x] `every`
   - [x] `some`
-  - [ ] `find`
+  - [x] `find`
   - [ ] `findIndex`
+  - [ ] `indexOf`
   - [ ] `includes`
   - [ ] `reduce`
 - `lodash` - [링크](https://lodash.com/docs/4.17.15)
