@@ -6,6 +6,7 @@ const {
   isUndefiend,
   isNull,
   isObject,
+  isFunction,
 } = require('./index');
 
 describe('check array', () => {
@@ -117,11 +118,39 @@ describe('check object', () => {
     expect(isObject(value)).toBe(true);
   });
 
-  it('1,\'a\', "",[], undefined, false is not null', () => {
+  it('1,\'a\', "", [], undefined, false is not null', () => {
     const values = [1, 'a', '', [], undefined, false];
 
     values.forEach((value) => {
-      expect(isNull(value)).not.toBe(true);
+      expect(isObject(value)).not.toBe(true);
+    });
+  });
+});
+
+describe('check function', () => {
+  it('함수 선언형 is function', () => {
+    const value = function test() {};
+
+    expect(isFunction(value)).toBe(true);
+  });
+
+  it('함수 표현식 is function', () => {
+    const value = function () {};
+
+    expect(isFunction(value)).toBe(true);
+  });
+
+  it('화살표 함수 is function', () => {
+    const value = () => {};
+
+    expect(isFunction(value)).toBe(true);
+  });
+
+  it('1,\'a\', "", {}, [], undefined, false is not null', () => {
+    const values = [1, 'a', '', {}, [], undefined, false];
+
+    values.forEach((value) => {
+      expect(isFunction(value)).not.toBe(true);
     });
   });
 });

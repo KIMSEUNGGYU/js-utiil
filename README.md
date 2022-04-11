@@ -11,7 +11,7 @@ js 로 만들어보는 util 성 기능
    - [x] `undefined`
    - [x] `null`
    - [x] `object`
-   - [ ] `function`
+   - [x] `function`
    - [ ] `iterable`
    - [ ] `promise`
 - `array 메서드` 

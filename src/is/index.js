@@ -23,7 +23,11 @@ function isNull(value) {
 }
 
 function isObject(value) {
-  return value instanceof Object;
+  return value !== null && typeof value === 'object' && value.constructor === Object;
+}
+
+function isFunction(value) {
+  return typeof value === 'function';
 }
 
 module.exports = {
@@ -34,4 +38,5 @@ module.exports = {
   isUndefiend,
   isNull,
   isObject,
+  isFunction,
 };
