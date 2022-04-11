@@ -22,6 +22,10 @@ function isNull(value) {
   return value === null;
 }
 
+function isObject(value) {
+  return value instanceof Object;
+}
+
 module.exports = {
   isArray,
   isNumber,
@@ -29,4 +33,5 @@ module.exports = {
   isBoolean,
   isUndefiend,
   isNull,
+  isObject,
 };

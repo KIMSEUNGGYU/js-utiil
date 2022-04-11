@@ -10,7 +10,7 @@ js 로 만들어보는 util 성 기능
    - [x] `boolean`
    - [x] `undefined`
    - [x] `null`
-   - [ ] `object`
+   - [x] `object`
    - [ ] `function`
    - [ ] `iterable`
    - [ ] `promise`

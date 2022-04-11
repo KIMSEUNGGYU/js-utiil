@@ -1,4 +1,12 @@
-const { isArray, isNumber, isString, isBoolean, isUndefiend, isNull } = require('./index');
+const {
+  isArray,
+  isNumber,
+  isString,
+  isBoolean,
+  isUndefiend,
+  isNull,
+  isObject,
+} = require('./index');
 
 describe('check array', () => {
   it('array type is true', () => {
@@ -89,6 +97,28 @@ describe('check null', () => {
 
   it('1,\'a\', "",{},[], undefined, false is not null', () => {
     const values = [1, 'a', '', {}, [], undefined, false];
+
+    values.forEach((value) => {
+      expect(isNull(value)).not.toBe(true);
+    });
+  });
+});
+
+describe('check object', () => {
+  it('{} is object', () => {
+    const value = {};
+
+    expect(isObject(value)).toBe(true);
+  });
+
+  it('{name: "gyu"} is object', () => {
+    const value = { name: 'gyu' };
+
+    expect(isObject(value)).toBe(true);
+  });
+
+  it('1,\'a\', "",[], undefined, false is not null', () => {
+    const values = [1, 'a', '', [], undefined, false];
 
     values.forEach((value) => {
       expect(isNull(value)).not.toBe(true);
