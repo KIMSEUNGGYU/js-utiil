@@ -1,66 +1,41 @@
-// const _ = require("lodash");
+//  WeakMap
+function deepCloneWeakMap(target, map = new WeakMap()) {
+  if (typeof target === 'object') {
+    const cloneTarget = Array.isArray(target) ? [] : {};
 
-// // _.cloneDeep(value)
-// const cache = new WeakMap();
-// function cloneDeepWeakMap(value) {
-//   const stack = [];
-//   const result = {};
-//   // console.log("Ss", value);
-//   do {
-//     const currentTarget = stack.pop() || {};
-//     console.log(currentTarget);
+    if (map.get(target)) {
+      return map.get(target);
+    }
 
-//     if (typeof value === "object") {
-//       Object.keys(value).forEach((key) => {
-//         if (typeof value[key] === "object") {
-//           stack.push(value[key]);
-//         } else {
-//           currentTarget[key] = value[key];
-//         }
-//         // console.log("aa", key, value[key]);
-//         // // stack.push(value[key]);
-//         // console.log(key);
-//       });
-//     }
-//     console.log("s", stack);
-//     console.log("currentTarget", currentTarget);
-//     // stack.pop();
-//   } while (stack.length > 0);
+    map.set(target, cloneTarget);
 
-//   console.log("stack", stack);
-//   console.log("result", result);
-// }
+    for (const key in target) {
+      cloneTarget[key] = deepCloneWeakMap(target[key], map);
+    }
 
-// module.exports = {
-//   cloneDeepWeakMap,
-// };
+    return cloneTarget;
+  } else {
+    return target;
+  }
+}
 
-// // main
-// const object = {
-//   a: 1,
-//   b: 2,
-//   c: {
-//     d: 3,
-//   },
-// };
+module.exports = {
+  deepCloneWeakMap,
+};
 
-// // Object.keys(object).forEach((key) => {
-// //   console.log(key);
-// //   console.log(cache.get(key));
-// // });
-
-// const a = cloneDeepWeakMap(object);
-
-// // console.log(a.``);
-
-// // time test
-// // console.time("test");
-// // for (let i = 0; i < 10000; i++) {
-// //   const copyObject = cloneDeep(object);
-// // }
-// // console.timeEnd("test");
-
-// // const copyObject = cloneDeepWeakMap(object);
-// // console.assert(object !== copyObject);
-// // console.assert(object.a === copyObject.a);
-// // console.assert(object.c !== copyObject.c);
+const target = {
+  field1: 1,
+  field2: undefined,
+  field3: {
+    child: 'child',
+  },
+  field4: [2, 4, 8],
+};
+target.target = target; // 순환참조, 하지만 map 으로 처리
+const cloneTarget3 = deepCloneWeakMap(target);
+// console.log('target', target, 'cloneTarget3', cloneTarget3);
+console.assert(target !== cloneTarget3);
+console.assert(target.field1 === cloneTarget3.field1);
+console.assert(target.field2 === cloneTarget3.field2);
+console.assert(target.field3 !== cloneTarget3.field3);
+console.assert(target.field4 !== cloneTarget3.field4);

@@ -28,7 +28,8 @@ js 로 만들어보는 util 성 기능
   - [x] `chunk`
   - [ ] `curry`
   - [ ] `flat`
-  - [ ] `cloneDeep`
+  - [x] `cloneDeep`
+  - [ ] `cloneDeep` - with. WeakMap
   - [x] `memoize`
   - [ ] `debounce`
   - [ ] `throttle` 

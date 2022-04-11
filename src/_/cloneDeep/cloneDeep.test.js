@@ -1,10 +1,10 @@
-const _ = require("lodash");
+const _ = require('lodash');
 
-const { cloneDeep } = require("./cloneDeep");
-const { cloneDeepWeakMap } = require("./cloneDeepWeakmap");
+const { cloneDeep } = require('./cloneDeep');
+const { deepCloneWeakMap } = require('./cloneDeepWeakmap');
 
-describe("cloneDeep", () => {
-  it("object", () => {
+describe('cloneDeep', () => {
+  it('object', () => {
     const object = {
       a: 1,
       b: 2,
@@ -20,7 +20,7 @@ describe("cloneDeep", () => {
     expect(object.c).not.toBe(copyObject.c);
   });
 
-  it("object - weakMap", () => {
+  it('object - weakMap', () => {
     const object = {
       a: 1,
       b: 2,
@@ -29,7 +29,7 @@ describe("cloneDeep", () => {
       },
     };
 
-    const copyObject = cloneDeepWeakMap(object);
+    const copyObject = deepCloneWeakMap(object);
 
     expect(object).not.toBe(copyObject);
     expect(object.a).toBe(copyObject.a);

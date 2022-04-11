@@ -1,10 +1,10 @@
-const _ = require("lodash");
+const _ = require('lodash');
 
 // _.cloneDeep(value)
 function cloneDeep(value) {
   const result = {};
 
-  if (typeof value === "object") {
+  if (typeof value === 'object') {
     Object.keys(value).forEach((key) => {
       result[key] = cloneDeep(value[key]);
     });
