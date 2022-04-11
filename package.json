@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/KIMSEUNGGYU/js-utiil#readme",
   "devDependencies": {
+    "@types/jest": "^27.4.1",
     "jest": "^27.5.1"
   },
   "dependencies": {
