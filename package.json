@@ -19,8 +19,18 @@
   },
   "homepage": "https://github.com/KIMSEUNGGYU/js-utiil#readme",
   "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "@babel/preset-typescript": "^7.16.7",
     "@types/jest": "^27.4.1",
-    "jest": "^27.5.1"
+    "@types/lodash": "^4.14.182",
+    "assert": "^2.0.0",
+    "babel-jest": "^28.0.3",
+    "jest": "^27.5.1",
+    "supertest": "^6.2.3",
+    "ts-jest": "^27.1.4",
+    "typescript": "^4.6.4"
   },
   "dependencies": {
     "lodash": "^4.17.21"
